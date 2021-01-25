@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Warehouse Managment System 491B"
