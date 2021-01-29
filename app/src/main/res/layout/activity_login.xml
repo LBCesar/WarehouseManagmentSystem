@@ -15,14 +15,14 @@
     </View>
 
     <TextView
-        android:layout_marginTop="35dp"
-        android:textColor="@color/colorWhite"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        android:text="Warehouse Management System"
-        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Warehouse Management System"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:layout_marginTop="35dp"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -31,16 +31,6 @@
         android:layout_below="@+id/header_view"
         android:orientation="vertical">
         <include layout="@layout/loginform"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/bottom_bg"/>
     </LinearLayout>
 
 

@@ -3,47 +3,56 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:gravity="center"
         android:orientation="vertical">
+
         <EditText
-            android:id="@+id/etemail"
+            android:id="@+id/login_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
-
-            android:inputType="textEmailAddress" />
+            android:singleLine="true"
+            android:hint="Username"
+            android:layout_marginTop="5dp"
+            android:paddingStart="5dp" />
 
         <EditText
-            android:id="@+id/mypass"
+            android:id="@+id/login_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
-            />
+            android:layout_marginTop="10dp" />
+
         <Button
-            android:id="@+id/btnlogin"
-            android:textAllCaps="false"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/bottom_bg"
+            android:id="@+id/login_login_btn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:text="Log In"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:background="@drawable/bottom_bg"
+            android:onClick="login"/>
+
         <TextView
-            android:id="@+id/createnewac"
-            android:layout_marginTop="10dp"
+            android:id="@+id/login_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Create a new Account!"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:layout_gravity="center"
-            android:text="Create a new Account!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:onClick="registerAccount"/>
 
     </LinearLayout>
 
