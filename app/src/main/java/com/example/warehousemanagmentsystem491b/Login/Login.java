@@ -1,7 +1,5 @@
 package com.example.warehousemanagmentsystem491b.Login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +8,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.warehousemanagmentsystem491b.MainActivity;
 import com.example.warehousemanagmentsystem491b.R;
-
-import org.w3c.dom.Text;
 
 public class Login extends AppCompatActivity {
 
@@ -28,12 +26,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //
         loginUsername = findViewById(R.id.login_username);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_login_btn);
         loginRegister = findViewById(R.id.login_register_btn);
-
 
     }
 
@@ -43,13 +39,11 @@ public class Login extends AppCompatActivity {
      */
     public void login(View view) {
         if (setValidation()){
-//            Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
             Intent intentMainMenu = new Intent(this, MainActivity.class);
             startActivity(intentMainMenu);
         } else {
             displayToast("Error in Login");
         }
-
     }
 
 
@@ -62,14 +56,16 @@ public class Login extends AppCompatActivity {
         startActivity(intentRegister);
     }
 
+
     // Incomplete!!! returns a boolean true or false? successful login or not
     public boolean setValidation(){
+
         // empty field gives errors
         if (loginUsername.getText().toString().isEmpty()){
-//            Toast.makeText(getApplicationContext(), "Empty Field", Toast.LENGTH_SHORT).show();
+            // add
             return false;
         } else if(loginPassword.getText().toString().isEmpty()){
-//            Toast.makeText(getApplicationContext(), "Empty Field", Toast.LENGTH_SHORT).show();
+            // add!
             return false;
         } else{
             // username = admin, password = admin
@@ -80,6 +76,7 @@ public class Login extends AppCompatActivity {
             }
         }
         return false;
+
     }
 
 
@@ -94,3 +91,4 @@ public class Login extends AppCompatActivity {
     }
 
 }
+

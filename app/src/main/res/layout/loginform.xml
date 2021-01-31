@@ -50,7 +50,7 @@
             android:text="Create a new Account!"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#2196F3"
             android:layout_gravity="center"
             android:onClick="registerAccount"/>
 

@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">Warehouse Managment System 491B</string>
+
+    <string name="app_name"> WMS </string>
+
+
+    <!--    String values for Register Activity -->
+    <string name="err_register_name">Please re-enter the name</string>
+    <string name="err_register_email">Re-enter email</string>
+    <string name="err_register_password">Re-enter password</string>
+    <string name="err_register_password_confirmation">Must match password</string>
+
 
 </resources>
