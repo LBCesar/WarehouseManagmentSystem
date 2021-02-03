@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.warehousemanagmentsystem491b.Employee.EmployeeMenu;
+import com.example.warehousemanagmentsystem491b.Employee.add_supplier;
 import com.example.warehousemanagmentsystem491b.MainActivity;
 import com.example.warehousemanagmentsystem491b.R;
 
@@ -39,8 +41,10 @@ public class Login extends AppCompatActivity {
      */
     public void login(View view) {
         if (setValidation()){
-            Intent intentMainMenu = new Intent(this, MainActivity.class);
-            startActivity(intentMainMenu);
+            //Intent intentMainMenu = new Intent(this, MainActivity.class);
+            //startActivity(intentMainMenu);
+            Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
+            startActivity(toEmployeeMainMenuIntent);
         } else {
             displayToast("Error in Login");
         }
@@ -76,9 +80,20 @@ public class Login extends AppCompatActivity {
             }
         }
         return false;
-
     }
 
+    /*
+    public void goToMainMenu() {
+        Intent toMainMenuIntent = new Intent(this, MainActivity.class);
+        startActivity(toMainMenuIntent);
+    }
+
+    public void goToEmployeeMainMenu() {
+        Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
+        startActivity(toEmployeeMainMenuIntent);
+    }
+
+     */
 
     /**
      * Displays a Toast with the message.

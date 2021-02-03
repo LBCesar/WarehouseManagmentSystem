@@ -1,13 +1,18 @@
 <resources>
-
     <string name="app_name"> WMS </string>
 
+    <string name="add_supplier">Add Supplier</string>
+    <string name="manage_employees">Manage employees</string>
+    <string name="button">Button</string>
+    <string name="supplier_name">Supplier name</string>
+    <string name="supplier_phone">Supplier phone</string>
+    <string name="supplier_email">Supplier email</string>
+    <string name="supplier__shipping_address">Supplier Shipping Address\"</string>
+    <string name="manage_inventory">Manage Inventory</string>
 
     <!--    String values for Register Activity -->
     <string name="err_register_name">Please re-enter the name</string>
     <string name="err_register_email">Re-enter email</string>
     <string name="err_register_password">Re-enter password</string>
     <string name="err_register_password_confirmation">Must match password</string>
-
-
 </resources>

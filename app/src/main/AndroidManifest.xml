@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login.Register"
-            android:theme="@style/Theme.AppCompat.NoActionBar"> </activity>
-        <activity android:name=".Login.Login"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Employee.add_supplier"></activity>
+        <activity android:name=".Employee.EmployeeMenu" />
+        <activity android:name=".Login.Register" />
+        <activity android:name=".Login.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
