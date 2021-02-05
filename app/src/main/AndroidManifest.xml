@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Employee.add_supplier"></activity>
+        <activity android:name=".Orderlist.OrderList"></activity>
+        <activity android:name=".Employee.add_supplier" />
         <activity android:name=".Employee.EmployeeMenu" />
         <activity android:name=".Login.Register" />
         <activity android:name=".Login.Login">
