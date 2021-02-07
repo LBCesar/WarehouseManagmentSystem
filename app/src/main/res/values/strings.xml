@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name"> WMS </string>
 
+    <!-- String values for Suppliers    -->
     <string name="add_supplier">Add Supplier</string>
     <string name="manage_employees">Manage employees</string>
     <string name="button">Button</string>
-    <string name="supplier_name">Supplier name</string>
-    <string name="supplier_phone">Supplier phone</string>
-    <string name="supplier_email">Supplier email</string>
-    <string name="supplier__shipping_address">Supplier Shipping Address\"</string>
+    <string name="supplier_name">Enter Supplier name</string>
+    <string name="supplier_phone">Enter Supplier phone</string>
+    <string name="supplier_email">Enter Supplier email</string>
+    <string name="supplier__shipping_address">Enter Supplier Shipping Address</string>
+
     <string name="manage_inventory">Manage Inventory</string>
 
     <!--    String values for Register Activity -->

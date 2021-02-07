@@ -40,3 +40,6 @@ public class OrderList extends AppCompatActivity {
     }
 
 }
+
+
+// RecyclerView: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example

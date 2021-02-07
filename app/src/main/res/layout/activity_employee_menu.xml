@@ -16,8 +16,8 @@
         android:padding="4dp"
         android:text="Employee Menu"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#4d4d4d"
-        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <ListView

@@ -102,3 +102,8 @@ public class Login extends AppCompatActivity {
 
 }
 
+
+// Login:   https://uniqueandrocode.com/login-and-registration-form-in-android-studio-code/
+//          https://www.tutlane.com/tutorial/android/android-login-and-registration-screen-design
+
+
