@@ -17,4 +17,8 @@
     <string name="err_register_email">Re-enter email</string>
     <string name="err_register_password">Re-enter password</string>
     <string name="err_register_password_confirmation">Must match password</string>
+
+    <!-- Dollar ($) symbol    -->
+    <string name="us">\u0024</string>
+
 </resources>

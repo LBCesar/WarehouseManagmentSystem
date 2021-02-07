@@ -1,6 +1,8 @@
 package com.example.warehousemanagmentsystem491b.Orderlist;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -28,7 +30,6 @@ public class OrderList extends AppCompatActivity {
         recyclerView.setAdapter(new ItemAdapter(initializeItem()));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-
     }
 
     public List<String> initializeItem() {
@@ -39,7 +40,14 @@ public class OrderList extends AppCompatActivity {
         return data;
     }
 
+    public void addNewProduct(View view) {
+        Intent intentOrderItem = new Intent(this, Product.class);
+        startActivity(intentOrderItem);
+    }
+
 }
 
 
 // RecyclerView: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
+
+

@@ -25,7 +25,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
-        android:text="Supplier Name" />
+        android:text="Company Name" />
 
     <EditText
         android:id="@+id/supplier_name"

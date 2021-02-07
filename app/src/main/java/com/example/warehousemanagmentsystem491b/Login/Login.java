@@ -38,9 +38,16 @@ public class Login extends AppCompatActivity {
      * @param view
      */
     public void login(View view) {
-        if (setValidation()){
+
+        if (setValidation()) {
+
             Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
             startActivity(toEmployeeMainMenuIntent);
+
+//            // testing activity after login :p
+//            Intent test = new Intent(this, Product.class);
+//            startActivity(test);
+
         } else {
             displayToast("Error in Login");
         }
