@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.warehousemanagmentsystem491b.Orderlist.OrderList;
+import com.example.warehousemanagmentsystem491b.Profile.Profile;
 import com.example.warehousemanagmentsystem491b.R;
 
 public class EmployeeMenu extends AppCompatActivity {
@@ -20,7 +21,8 @@ public class EmployeeMenu extends AppCompatActivity {
             "OrderList",
             "Shift Management",
             "Suppliers",
-            "Customers"
+            "Customers",
+            "Profile"
     };
     private ListView employeeMenu_listView;
 
@@ -52,6 +54,9 @@ public class EmployeeMenu extends AppCompatActivity {
                     startActivity(startAddSupplier);
                 } else if (i == 4) {   // Customers
                     displayToast("Customers Clicked! ");
+                } else if (i == 5) {   // Profile
+                    Intent profile = new Intent(EmployeeMenu.this, Profile.class);
+                    startActivity(profile);
                 }
 
             }
