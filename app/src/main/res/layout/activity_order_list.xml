@@ -1,41 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
-    tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_itemDisplay"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
-        android:scrollbars="vertical" />
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp"
-        android:onClick="addNewProduct"
-        android:text="Add Product" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <!--    Implement a FAB tool -->
-    <!--    <android.support.design.widget.FloatingActionButton-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_alignParentRight="true"-->
-    <!--        android:layout_alignParentEnd="true"-->
-    <!--        android:layout_margin="16dp"-->
-    <!--        android:src="@drawable/ic_reset"-->
-    <!--        android:tint="@android:color/white"-->
-    <!--        android:onClick="resetSports"/>-->
+        </com.google.android.material.appbar.AppBarLayout>
 
-</RelativeLayout>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/orderlist_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EAEAEA"
+            android:clickable="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_itemDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderlist_search"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:scrollbars="vertical" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/orderlist_FAB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="32dp"
+            app:fabSize="auto"
+            app:hoveredFocusedTranslationZ="2dp"
+            android:elevation="6dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:visibility="visible"
+            app:backgroundTint="#ffffff"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_baseline_add"
+            android:clickable="true"
+            android:onClick="fab1_main_onClick" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/orderlist_FAB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/orderlist_FAB1"
+            android:layout_alignEnd="@+id/orderlist_FAB1"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:elevation="6dp"
+            android:focusable="true"
+            android:onClick="fab2_addProduct_onClick"
+            android:visibility="invisible"
+            app:backgroundTint="#ffffff"
+            app:hoveredFocusedTranslationZ="2dp"
+            app:pressedTranslationZ="12dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_baseline_add" />
+
+        <TextView
+            android:id="@+id/orderlist_addProductText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/orderlist_FAB1"
+            android:layout_alignEnd="@+id/orderlist_FAB2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="70dp"
+            android:background="@color/cardview_dark_background"
+            android:padding="8dp"
+            android:text="Add Product"
+            android:textColor="#ffffff"
+            android:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/orderlist_FAB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/orderlist_FAB2"
+            android:layout_alignEnd="@+id/orderlist_FAB2"
+            android:background="?android:attr/selectableItemBackground"
+            android:visibility="invisible"
+            android:elevation="6dp"
+            app:hoveredFocusedTranslationZ="2dp"
+            android:focusable="true"
+            app:backgroundTint="#ffffff"
+            app:pressedTranslationZ="12dp"
+            android:src="@drawable/ic_baseline_minus"
+            android:clickable="true"
+            android:onClick="fab3click" />
+
+    </RelativeLayout>
+
+</layout>
+

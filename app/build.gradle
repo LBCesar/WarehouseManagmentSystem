@@ -4,6 +4,10 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.warehousemanagmentsystem491b"
         minSdkVersion 26
@@ -30,7 +34,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'androidx.cardview:cardview:1.0.0'           // CardView used in Login Design
-    implementation 'com.basgeekball:awesome-validation:4.2'     // Awesome Validation from github used in Register to check invalid inputs
+    implementation 'androidx.cardview:cardview:1.0.0'               // CardView used in Login Design
+    implementation 'com.basgeekball:awesome-validation:4.2'         // Awesome Validation from github used in Register to check invalid inputs
+
+    implementation 'com.google.android.material:material:<version>' // Material Design from github for better UI design
+
 }
 

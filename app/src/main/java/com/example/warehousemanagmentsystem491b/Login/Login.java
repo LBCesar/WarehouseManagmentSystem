@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
             startActivity(toEmployeeMainMenuIntent);
 
 //            // testing activity after login :p
-//            Intent test = new Intent(this, Product.class);
+//            Intent test = new Intent(this, OrderList.class);
 //            startActivity(test);
 
         } else {
@@ -84,18 +84,6 @@ public class Login extends AppCompatActivity {
         }
         return false;
     }
-
-    /*
-    public void goToMainMenu() {
-        Intent toMainMenuIntent = new Intent(this, MainActivity.class);
-        startActivity(toMainMenuIntent);
-    }
-
-    public void goToEmployeeMainMenu() {
-        Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
-        startActivity(toEmployeeMainMenuIntent);
-    }
-     */
 
     /**
      * Displays a Toast with the message.
