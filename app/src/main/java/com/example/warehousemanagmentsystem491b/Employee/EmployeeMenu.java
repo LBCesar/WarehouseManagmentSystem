@@ -1,20 +1,28 @@
 package com.example.warehousemanagmentsystem491b.Employee;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.warehousemanagmentsystem491b.Orderlist.OrderList;
 import com.example.warehousemanagmentsystem491b.Profile.Profile;
 import com.example.warehousemanagmentsystem491b.R;
 
 public class EmployeeMenu extends AppCompatActivity {
+
+    private ListView employeeMenu_listView;
+    private Toolbar employee_toolbar;
 
     private final String[] employeeMenu = {
             "Manage Inventory",
@@ -24,7 +32,7 @@ public class EmployeeMenu extends AppCompatActivity {
             "Customers",
             "Profile"
     };
-    private ListView employeeMenu_listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +40,13 @@ public class EmployeeMenu extends AppCompatActivity {
         setContentView(R.layout.activity_employee_menu);
 
         employeeMenu_listView = findViewById(R.id.employee_listView);
+        employee_toolbar = findViewById(R.id.employee_toolbar);
+        setSupportActionBar(employee_toolbar);
+
 
         ArrayAdapter adapter = new ArrayAdapter(this,
                 R.layout.list_employee_mainmenu, R.id.employee_mainmenu_textView, employeeMenu);
-
         employeeMenu_listView.setAdapter(adapter);
-
         employeeMenu_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -58,22 +67,37 @@ public class EmployeeMenu extends AppCompatActivity {
                     Intent profile = new Intent(EmployeeMenu.this, Profile.class);
                     startActivity(profile);
                 }
-
             }
         });
+
     }
 
-//    Initial Test Button
-//    public void add_supplier_onClick(View view) {
-//        Intent startAddSupplier = new Intent(this, add_supplier.class);
-//        startActivity(startAddSupplier);
-//    }
-//
-//    public void add_order_list(View view) {
-//        Intent startOrderList = new Intent(this, OrderList.class);
-//        startActivity(startOrderList);
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.employee_toolbar_menu, menu);
+        return true;
+    }
 
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        switch (item.getItemId()) {
+            case R.id.employee_menu_signout:
+                displayToast("Sign Out Clicked");
+                break;
+            case R.id.employee_menu_profile:
+                Intent profile = new Intent(EmployeeMenu.this, Profile.class);
+                startActivity(profile);
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
 
     /**
      * Displays a Toast with the message.
@@ -87,7 +111,9 @@ public class EmployeeMenu extends AppCompatActivity {
 
 }
 
+/*
+     Website Referenced:
+         - https://www.javatpoint.com/android-custom-listview
+         - https://stackoverflow.com/questions/19662233/how-open-new-activity-clicking-an-item-in-listview
+ */
 
-// Website Referenced:
-// https://www.javatpoint.com/android-custom-listview
-// https://stackoverflow.com/questions/19662233/how-open-new-activity-clicking-an-item-in-listview
