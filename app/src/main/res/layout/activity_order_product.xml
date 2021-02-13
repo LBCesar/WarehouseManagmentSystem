@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--TODO Need to make whole activity scrollable-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:baselineAligned="true"
     android:orientation="vertical"
     tools:context=".Orderlist.Product">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,101 +21,136 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
-        android:text="Product Name" />
-
-    <EditText
+    <!--Product Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderlist_product_name_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:hint="Ex: Water"
-        android:inputType="text" />
+        android:hint="Product Name"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderlist_product_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Product ID" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <!--Product ID-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderlist_product_id_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
-        android:hint="Ex: 1023"
-        android:inputType="number" />
+        android:hint="Product ID"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderlist_product_id_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Product Price" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <!--Product Price-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderlist_product_price_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
-        android:hint="Ex: 69.69"
-        android:inputType="numberDecimal" />
+        android:hint="Product Price"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderlist_product_price_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Product Description" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <!--Product Description-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderlist_product_description_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
-        android:hint="Ex: This is a Acqua di Cristallo Tributo "
-        android:inputType="textMultiLine" />
+        android:hint="Product Description"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderlist_product_description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Quantity" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="73dp">
 
-        <EditText
-            android:id="@+id/product_quantity"
-            android:layout_width="125dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:inputType="number"
-            android:text="0" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="150dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Quantity"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/product_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="0" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
             android:id="@+id/image_minus"
@@ -146,3 +185,164 @@
         android:textColor="@color/colorWhite" />
 
 </LinearLayout>
+
+
+    <!--Initial Order Product Activity-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:baselineAligned="true"-->
+    <!--    android:orientation="vertical"-->
+    <!--    tools:context=".Orderlist.Product">-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        android:text="Add Product"-->
+    <!--        android:textColor="#303F9F"-->
+    <!--        android:textSize="25sp"-->
+    <!--        android:textStyle="bold" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Product Name" />-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginRight="50dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Ex: Water"-->
+    <!--        android:inputType="text" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Product Name" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Product ID" />-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginRight="50dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:hint="Ex: 1023"-->
+    <!--        android:inputType="number" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Product Price" />-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginRight="50dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:hint="Ex: 69.69"-->
+    <!--        android:inputType="numberDecimal" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Product Description" />-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginRight="50dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:hint="Ex: This is a Acqua di Cristallo Tributo "-->
+    <!--        android:inputType="textMultiLine" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:text="Quantity" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="73dp">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/product_quantity"-->
+    <!--            android:layout_width="125dp"-->
+    <!--            android:layout_height="65dp"-->
+    <!--            android:layout_marginLeft="50dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:inputType="number"-->
+    <!--            android:text="0" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/image_minus"-->
+    <!--            android:layout_width="65dp"-->
+    <!--            android:layout_height="65dp"-->
+    <!--            android:layout_alignParentTop="true"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:onClick="decreaseQuantity"-->
+    <!--            android:src="@drawable/ic_baseline_minus" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/image_plus"-->
+    <!--            android:layout_width="65dp"-->
+    <!--            android:layout_height="65dp"-->
+    <!--            android:layout_alignParentTop="true"-->
+    <!--            android:layout_marginRight="30dp"-->
+    <!--            android:layout_toLeftOf="@+id/image_minus"-->
+    <!--            android:onClick="increaseQuantity"-->
+    <!--            android:src="@drawable/ic_baseline_add" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:background="@drawable/bottom_bg"-->
+    <!--        android:text="Add Product"-->
+    <!--        android:textColor="@color/colorWhite" />-->
+
+    <!--</LinearLayout>-->

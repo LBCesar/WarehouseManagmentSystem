@@ -22,7 +22,7 @@ public class EditProfile extends AppCompatActivity {
      *
      * @param view
      */
-    public void backToMenu(View view) {
+    public void backToProfile(View view) {
         Intent intentBackToProfile = new Intent(this, Profile.class);
         startActivity(intentBackToProfile);
     }
@@ -32,10 +32,11 @@ public class EditProfile extends AppCompatActivity {
      *
      * @param view
      */
-    public void SaveButton(View view) {
+    public void save(View view) {
         // Just to get ready if more things are added
-        if (view.getId() == R.id.edit_profile_save_btn) {
+        if (view.getId() == R.id.edit_profile_save_button) {
             displayToast("Information Saved!");
+            backToProfile(view);
         }
     }
 

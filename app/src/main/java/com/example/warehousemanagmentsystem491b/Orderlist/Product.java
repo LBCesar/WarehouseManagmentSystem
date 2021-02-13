@@ -23,6 +23,63 @@ public class Product extends AppCompatActivity {
 
         quantityText = (EditText) findViewById(R.id.product_quantity);
 
+        final EditText editProductName = (EditText) findViewById(R.id.orderlist_product_name_edit_text);
+        final EditText editProductID = (EditText) findViewById(R.id.orderlist_product_id_edit_text);
+        final EditText editProductPrice = (EditText) findViewById(R.id.orderlist_product_price_edit_text);
+        final EditText editProductDescription = (EditText) findViewById(R.id.orderlist_product_description_edit_text);
+
+        // Placeholder for Product Name
+        editProductName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editProductName.setHint("Ex: Water");
+                } else {
+                    editProductName.setHint("");
+                }
+            }
+
+        });
+
+        // Placeholder for Product ID
+        editProductID.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editProductID.setHint("Ex: 1023");
+                } else {
+                    editProductID.setHint("");
+                }
+            }
+
+        });
+
+        // Placeholder for Product ID
+        // TODO ADD PREFIX "$"
+        editProductPrice.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editProductPrice.setHint("Ex: 69.69");
+                } else {
+                    editProductPrice.setHint("");
+                }
+            }
+
+        });
+
+        // Placeholder for Product Description
+        editProductDescription.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editProductDescription.setHint("Ex: This is a Acqua di Cristallo Tributo ");
+                } else {
+                    editProductDescription.setHint("");
+                }
+            }
+
+        });
     }
 
     /**
@@ -53,5 +110,10 @@ public class Product extends AppCompatActivity {
         quantityText.setText(String.valueOf(quantity));
     }
 
+
 }
 
+/*
+     Website Referenced:
+         - https://stackoverflow.com/questions/44164170/android-edittext-with-different-floating-label-and-placeholder/44165904
+ */

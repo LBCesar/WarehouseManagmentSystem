@@ -42,12 +42,65 @@ public class Register extends AppCompatActivity
         registerEmail = findViewById(R.id.register_email);
         registerPassword = findViewById(R.id.register_password);
         registerConfirmPassword = findViewById(R.id.register_confirm_password);
-        registerSignupButton = findViewById(R.id.register_signup_btn);
+        registerSignupButton = findViewById(R.id.register_signup_button);
 
         validateUserInput();
 
         // Signup button Clicked
         registerSignupButton.setOnClickListener(this);
+
+        final EditText editRegisterName = (EditText) registerName;
+        final EditText editRegisterEmail = (EditText) registerEmail;
+        final EditText editRegisterPassword = (EditText) registerPassword;
+        final EditText editRegisterConfirmPassword = (EditText) registerConfirmPassword;
+
+        // Placeholder for Register Name
+        editRegisterName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editRegisterName.setHint("Enter Name");
+                } else {
+                    editRegisterName.setHint("");
+                }
+            }
+        });
+
+        // Placeholder for Register Email
+        editRegisterEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editRegisterEmail.setHint("Enter Email");
+                } else {
+                    editRegisterEmail.setHint("");
+                }
+            }
+        });
+
+        // Placeholder for Register Password
+        editRegisterPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editRegisterPassword.setHint("Enter Password");
+                } else {
+                    editRegisterPassword.setHint("");
+                }
+            }
+        });
+
+        // Placeholder for Register Confirm Password
+        editRegisterConfirmPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    editRegisterConfirmPassword.setHint("Enter Password Again");
+                } else {
+                    editRegisterConfirmPassword.setHint("");
+                }
+            }
+        });
     }
 
     public void validateUserInput() {
@@ -83,6 +136,9 @@ public class Register extends AppCompatActivity
                 Toast.LENGTH_SHORT).show();
     }
 
-
 }
 
+/*
+     Website Referenced:
+         - https://stackoverflow.com/questions/44164170/android-edittext-with-different-floating-label-and-placeholder/44165904
+ */

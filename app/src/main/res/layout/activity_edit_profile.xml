@@ -5,128 +5,154 @@
     android:baselineAligned="true"
     android:orientation="vertical">
 
-    <LinearLayout
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:baselineAligned="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".Profile.EditProfile">
 
         <TextView
             android:id="@+id/edit_profile_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="15dp"
+            android:layout_margin="40dp"
             android:text="Profile"
             android:textColor="#303F9F"
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Full Name" />
-
-        <EditText
-            android:id="@+id/edit_profile_name"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
-            android:hint="John Doe"
-            android:inputType="textPersonName" />
+            android:hint="Full Name"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Username" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/edit_profile_username"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
-            android:hint="JDoe"
-            android:inputType="text" />
+            android:hint="Username"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Email" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/edit_profile_email"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
-            android:hint="JohnDoe@gmail.com"
-            android:inputType="textEmailAddress" />
+            android:hint="Email"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Password" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/edit_profile_password"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
             android:hint="Password"
-            android:inputType="textPassword" />
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Confirm Password" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_profile_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/edit_profile_confirm_password"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
             android:hint="Confirm Password"
-            android:inputType="textPassword" />
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_profile_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/edit_profile_save_btn"
+            android:id="@+id/edit_profile_save_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_bg"
+            android:text="Save"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bottom_bg"
             android:textColor="@color/colorWhite"
-            android:layout_marginTop="40dp"
-            android:text="Save" />
+            android:onClick="save" />
 
     </LinearLayout>
 
@@ -134,17 +160,177 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/back_to_profile"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:clickable="true"
-            android:onClick="backToMenu"
-            android:text="back"
-            android:textAlignment="textStart"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:onClick="backToProfile"
+            android:src="@drawable/profile_exit_foreground" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView2"-->
+        <!--            android:layout_width="108dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:clickable="true"-->
+        <!--            android:onClick="backToProfile"-->
+        <!--            android:text=" Back"-->
+        <!--            android:textAlignment="textStart"-->
+        <!--            android:textSize="24sp"-->
+        <!--            android:textStyle="bold" />-->
     </FrameLayout>
 
 
 </RelativeLayout>
+
+    <!--Initial Edit Profile Activity-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:baselineAligned="true"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:baselineAligned="true"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/edit_profile_text"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:layout_marginBottom="15dp"-->
+    <!--            android:text="Profile"-->
+    <!--            android:textColor="#303F9F"-->
+    <!--            android:textSize="25sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="2dp"-->
+    <!--            android:text="Full Name" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_profile_name"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="John Doe"-->
+    <!--            android:inputType="textPersonName" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="2dp"-->
+    <!--            android:text="Username" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_profile_username"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="JDoe"-->
+    <!--            android:inputType="text" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="2dp"-->
+    <!--            android:text="Email" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_profile_email"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="JohnDoe@gmail.com"-->
+    <!--            android:inputType="textEmailAddress" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="2dp"-->
+    <!--            android:text="Password" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_profile_password"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="Password"-->
+    <!--            android:inputType="textPassword" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="2dp"-->
+    <!--            android:text="Confirm Password" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_profile_confirm_password"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginRight="50dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="Confirm Password"-->
+    <!--            android:inputType="textPassword" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/edit_profile_save_btn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginTop="40dp"-->
+    <!--            android:background="@drawable/button_background"-->
+    <!--            android:onClick="save"-->
+    <!--            android:text="Save"-->
+    <!--            android:textColor="@color/colorWhite" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView2"-->
+    <!--            android:layout_width="108dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:clickable="true"-->
+    <!--            android:onClick="backToMenu"-->
+    <!--            android:text=" Back"-->
+    <!--            android:textAlignment="textStart"-->
+    <!--            android:textSize="24sp"-->
+    <!--            android:textStyle="bold" />-->
+    <!--    </FrameLayout>-->
+
+
+    <!--</RelativeLayout>-->
