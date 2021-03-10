@@ -9,6 +9,18 @@
     android:orientation="vertical"
     tools:context=".Orderlist.Product">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/orderlist_product_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/employee_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -126,7 +138,8 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="73dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -167,7 +180,7 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:layout_toLeftOf="@+id/image_minus"
             android:onClick="increaseQuantity"
             android:src="@drawable/ic_baseline_add" />

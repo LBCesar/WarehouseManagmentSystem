@@ -70,6 +70,7 @@
                 android:onClick="EditProfileName"
                 android:text="Edit"
                 android:textColor="@color/colorWhite" />
+
         </RelativeLayout>
         <!--Full Name-->
         <!--        <com.google.android.material.textfield.TextInputLayout-->

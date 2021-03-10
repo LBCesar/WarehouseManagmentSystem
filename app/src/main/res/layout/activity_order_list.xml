@@ -10,34 +10,73 @@
         tools:context=".MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/orderlist_appbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/orderlist_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Ordering List"></androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
+        <!--       Remove: Take up useless space
+                This will go into the toolbar -->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/orderlist_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/orderlist_appbar_layout"
             android:background="#EAEAEA"
             android:clickable="true" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/orderlist_cardview_display"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/orderlist_search"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Display Design Here (╯°□°）╯︵ ┻━┻ "
+                android:textSize="30dp" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_itemDisplay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/orderlist_search"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_above="@+id/orderlist_confirm_button"
+            android:layout_below="@id/orderlist_cardview_display"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="16dp"
             android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/orderlist_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="Confirm Order"
+            android:textColor="@color/colorWhite" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/orderlist_FAB1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_margin="32dp"
             app:fabSize="auto"
             app:hoveredFocusedTranslationZ="2dp"

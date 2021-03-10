@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,8 +28,15 @@ public class EmployeeMenu extends AppCompatActivity {
             "OrderList",
             "Shift Management",
             "Suppliers",
-            "Customers",
-            "Profile"
+            "Customers"
+    };
+
+    private int[] employeeMenuImage = {
+            R.drawable.employee_mainmenu_manage_inventory,
+            R.drawable.employee_mainmenu_orderlist,
+            R.drawable.employee_mainmenu_shift_management,
+            R.drawable.employee_mainmenu_supplier,
+            R.drawable.employee_mainmenu_customer
     };
 
 
@@ -44,8 +50,7 @@ public class EmployeeMenu extends AppCompatActivity {
         setSupportActionBar(employee_toolbar);
 
 
-        ArrayAdapter adapter = new ArrayAdapter(this,
-                R.layout.list_employee_mainmenu, R.id.employee_mainmenu_textView, employeeMenu);
+        EmployeeMenuAdapter adapter = new EmployeeMenuAdapter(getApplicationContext(), employeeMenu, employeeMenuImage);
         employeeMenu_listView.setAdapter(adapter);
         employeeMenu_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -63,9 +68,6 @@ public class EmployeeMenu extends AppCompatActivity {
                     startActivity(startAddSupplier);
                 } else if (i == 4) {   // Customers
                     displayToast("Customers Clicked! ");
-                } else if (i == 5) {   // Profile
-                    Intent profile = new Intent(EmployeeMenu.this, Profile.class);
-                    startActivity(profile);
                 }
             }
         });
@@ -117,3 +119,11 @@ public class EmployeeMenu extends AppCompatActivity {
          - https://stackoverflow.com/questions/19662233/how-open-new-activity-clicking-an-item-in-listview
  */
 
+
+/**
+ * Customer:
+ * first name
+ * last name
+ * shipping address -> [strt number, city, zip]
+ * CreditCard-> [number, expiration, cvv]
+ */

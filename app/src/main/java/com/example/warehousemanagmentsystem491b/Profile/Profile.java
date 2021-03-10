@@ -59,6 +59,7 @@ public class Profile extends AppCompatActivity {
     public void EditProfileName(View view) {
         // Just to get ready if more things are added
         final EditText editProductName = (EditText) findViewById(R.id.profile_name);
+        final TextInputLayout editProductFullName = (TextInputLayout) findViewById(R.id.profile_full_name);
         if (view.getId() == R.id.test) {
             // Makes button invisible after being clicked
             final Button button = (Button) view;
@@ -72,6 +73,7 @@ public class Profile extends AppCompatActivity {
                 public boolean onKey(View view, int i, KeyEvent keyEvent) {
                     if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) && (i == KeyEvent.KEYCODE_ENTER)) {
                         editProductName.setEnabled(false);
+                        editProductFullName.setEnabled(false);
                         button.setVisibility(View.VISIBLE); // Makes button visible
                         return true;
                     }

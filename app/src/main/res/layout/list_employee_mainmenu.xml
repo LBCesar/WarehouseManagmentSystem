@@ -5,52 +5,40 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4px"
-        android:layout_marginTop="4px"
-        android:layout_marginRight="10px"
-        android:padding="5dp"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/employee_mainmenu_imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="4px"
+            android:layout_marginTop="4px"
+            android:layout_marginRight="10px"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
 
         <TextView
             android:id="@+id/employee_mainmenu_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:gravity="center"
             android:padding="4dp"
+            android:layout_toRightOf="@+id/employee_mainmenu_imageView"
             android:text="Text Example"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#4d4d4d"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
 
-
-    <!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--    android:id="@+id/employee_mainmenu_textView"-->
-    <!--    android:layout_width="wrap_content"-->
-    <!--    android:layout_height="wrap_content"-->
-    <!--    android:text="Text Example"-->
-    <!--    android:textStyle="bold"-->
-    <!--    android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
-    <!--    android:textSize="30sp"-->
-    <!--    android:textColor="#4d4d4d"-->
-    <!--    android:layout_marginStart="10dp"-->
-    <!--    android:layout_marginTop="5dp"-->
-    <!--    android:padding="4dp" />-->
 
 

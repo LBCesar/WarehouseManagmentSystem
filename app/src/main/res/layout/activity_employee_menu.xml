@@ -7,6 +7,7 @@
     tools:context=".Employee.EmployeeMenu">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/employee_appbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
@@ -20,70 +21,22 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/employee_text"
+        android:id="@+id/testtxt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="225dp"
+        android:layout_below="@+id/employee_appbar_layout"
         android:gravity="center"
-        android:padding="4dp"
-        android:layout_marginTop="60dp"
-        android:text="Employee Menu"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+        android:text="EMPTY SPACE"
+        android:textSize="25dp" />
 
     <ListView
         android:id="@+id/employee_listView"
         android:layout_width="match_parent"
-        android:layout_below="@+id/employee_text"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/testtxt"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="50dp"
         android:divider="#E9EAEC"
         android:dividerHeight="5dp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@id/employee_listView"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/black" />
-
-
-    <!--    <Button-->
-    <!--        android:id="@+id/add_supplier_button"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="136dp"-->
-    <!--        android:onClick="add_supplier_onClick"-->
-    <!--        android:text="@string/add_supplier"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/order_list_button" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button2"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="148dp"-->
-    <!--        android:text="@string/manage_employees"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.508"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/order_list_button"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="144dp"-->
-    <!--        android:onClick="add_order_list"-->
-    <!--        android:text="Order List"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/button2" />-->
-
 
 </RelativeLayout>
