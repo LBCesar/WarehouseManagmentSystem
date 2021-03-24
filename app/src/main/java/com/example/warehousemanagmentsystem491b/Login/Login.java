@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.warehousemanagmentsystem491b.Employee.EmployeeMenu;
+import com.example.warehousemanagmentsystem491b.Orderlist.OrderList;
 import com.example.warehousemanagmentsystem491b.R;
 
 public class Login extends AppCompatActivity {
@@ -40,12 +40,12 @@ public class Login extends AppCompatActivity {
     public void login(View view) {
 
         if (setValidation()) {
-            Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
-            startActivity(toEmployeeMainMenuIntent);
+//            Intent toEmployeeMainMenuIntent = new Intent(this, EmployeeMenu.class);
+//            startActivity(toEmployeeMainMenuIntent);
 
 //            // testing activity after login :p
-//            Intent test = new Intent(this, MainActivity.class);
-//            startActivity(test);
+            Intent test = new Intent(this, OrderList.class);
+            startActivity(test);
         } else {
             displayToast("Error in Login");
         }

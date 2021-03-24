@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:baselineAligned="true"
     android:orientation="vertical"
-    tools:context=".Orderlist.Product">
+    tools:context=".Orderlist.CreateItem">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/orderlist_product_appbar_layout"
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="number"
             android:singleLine="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:singleLine="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -155,7 +155,7 @@
             app:boxCornerRadiusTopStart="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/product_quantity"
+                android:id="@+id/orderlist_product_quantity_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -189,11 +189,11 @@
 
 
     <Button
+        android:id="@+id/orderlist_addProductButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bottom_bg"
         android:text="Add Product"
         android:textColor="@color/colorWhite" />
 

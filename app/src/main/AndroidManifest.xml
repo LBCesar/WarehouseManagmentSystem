@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".Profile.EditProfile" />
         <activity android:name=".Profile.Profile" />
-        <activity android:name=".Orderlist.Product" />
+        <activity
+            android:name=".Orderlist.CreateItem"
+            android:noHistory="true" />
         <activity android:name=".Orderlist.OrderList" />
         <activity android:name=".Employee.add_supplier" />
         <activity android:name=".Employee.EmployeeMenu" />

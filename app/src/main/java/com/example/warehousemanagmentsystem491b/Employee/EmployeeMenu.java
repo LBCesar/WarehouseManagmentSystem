@@ -25,7 +25,7 @@ public class EmployeeMenu extends AppCompatActivity {
 
     private final String[] employeeMenu = {
             "Manage Inventory",
-            "OrderList",
+            "Ordering List",
             "Shift Management",
             "Suppliers",
             "Customers"
@@ -56,7 +56,7 @@ public class EmployeeMenu extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                if (i == 0) {        // Manage Inventory
+                if (i == 0) {           // Manage Inventory
                     displayToast("Manage Inventory Clicked!");
                 } else if (i == 1) {   // Order List
                     Intent startOrderList = new Intent(EmployeeMenu.this, OrderList.class);

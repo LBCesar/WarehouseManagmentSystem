@@ -41,11 +41,12 @@
             android:layout_margin="16dp">
 
             <TextView
+                android:id="@+id/testingObjecttransfer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Display Design Here (╯°□°）╯︵ ┻━┻ "
+                android:text="Display Design Here"
                 android:textSize="30dp" />
 
         </com.google.android.material.card.MaterialCardView>
@@ -122,22 +123,6 @@
             android:textColor="#ffffff"
             android:visibility="invisible" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/orderlist_FAB3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/orderlist_FAB2"
-            android:layout_alignEnd="@+id/orderlist_FAB2"
-            android:background="?android:attr/selectableItemBackground"
-            android:visibility="invisible"
-            android:elevation="6dp"
-            app:hoveredFocusedTranslationZ="2dp"
-            android:focusable="true"
-            app:backgroundTint="#ffffff"
-            app:pressedTranslationZ="12dp"
-            android:src="@drawable/ic_baseline_minus"
-            android:clickable="true"
-            android:onClick="fab3click" />
 
     </RelativeLayout>
 
