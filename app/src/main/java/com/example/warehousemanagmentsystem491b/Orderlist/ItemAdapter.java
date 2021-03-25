@@ -39,19 +39,26 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     // Populating data into the item through holder
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
-//        holder.itemName.setText(this.data.get(position));
         Item item = items.get(position);
-        if (item.getName() != null) {
-            holder.itemName.setText(item.getName());
-//            holder.itemQuantity.setText(item.getQuantity());
-//            holder.itemPrice.setText(Double.toString(item.getPrice()));
-        }
+//        if (item.getName() != null) {
+        holder.itemName.setText(item.getName());
+        holder.itemQuantity.setText(String.valueOf(item.getQuantity()));
+        holder.itemPrice.setText("$ " + item.getPrice());
+//        }
     }
 
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
         return this.items.size();
+    }
+
+
+    public void deleteItem(int position) {
+        Item mRecentlyDeletedItem = items.get(position);
+        int mRecentlyDeletedItemPosition = position;
+        items.remove(position);
+        notifyItemRemoved(position);
     }
 
 
@@ -65,8 +72,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             super(itemView);
             itemView.setOnClickListener(this);
             itemName = itemView.findViewById(R.id.item_name);
-//            itemQuantity = itemView.findViewById(R.id.item_quantity);
-//            itemPrice    = itemView.findViewById(R.id.item_price);
+            itemQuantity = itemView.findViewById(R.id.item_quantity);
+            itemPrice = itemView.findViewById(R.id.item_price);
         }
 
         @Override

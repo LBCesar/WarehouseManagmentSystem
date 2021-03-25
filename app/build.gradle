@@ -37,5 +37,8 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'               // CardView used in Login Design
     implementation 'com.basgeekball:awesome-validation:4.2'         // Awesome Validation from github used in Register to check invalid inputs
     implementation 'com.google.android.material:material:<version>' // Material Design from github for better UI design
+
+    compile 'com.stone.vega.library:VegaLayoutManager:1.0.6'
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
 }
 

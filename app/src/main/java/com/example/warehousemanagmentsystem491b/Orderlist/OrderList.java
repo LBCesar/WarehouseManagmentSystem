@@ -11,12 +11,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.warehousemanagmentsystem491b.Item;
 import com.example.warehousemanagmentsystem491b.R;
+import com.example.warehousemanagmentsystem491b.SwipeToDeleteCallback;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.stone.vega.library.VegaLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class OrderList extends AppCompatActivity {
     private ItemAdapter mAdapter;
     private RecyclerView recyclerView;
 
-    // FAB
+    // Initializing Fab variables
     private TextView addProductTextView;
     private FloatingActionButton fab1_main, fab2_addProduct;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
@@ -39,30 +41,62 @@ public class OrderList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_list);
 
-        recyclerView = findViewById(R.id.rv_itemDisplay);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new ItemAdapter(items);
-        recyclerView.setAdapter(mAdapter);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
-
-        /*
-        if (getIntent().getParcelableExtra("item") != null){
-            Item item = getIntent().getParcelableExtra("item");
-            String itemName = item.getName();
-            Log.d("myTag", "This is my message" + itemName);
-            items.add(item);
-            mAdapter.notifyDataSetChanged();
-        }
-        items.add(new Item()); */
-
         addProductTextView = findViewById(R.id.orderlist_addProductText);
         fab1_main = findViewById(R.id.orderlist_FAB1);
         fab2_addProduct = findViewById(R.id.orderlist_FAB2);
 
-        animateFab();
+        recyclerView = findViewById(R.id.rv_itemDisplay);
 
+        // vega layout
+        // recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new VegaLayoutManager());
+        mAdapter = new ItemAdapter(items);
+        new ItemTouchHelper(new SwipeToDeleteCallback(mAdapter)).attachToRecyclerView(recyclerView);
+        recyclerView.setAdapter(mAdapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+
+//        recyclerView.setAdapter(mAdapter);
+//        recyclerView.setLayoutManager(new VegaLayoutManager());
+////        mAdapter = new ItemAdapter(items);
+//        ItemTouchHelper itemTouchHelper = new
+//                ItemTouchHelper(new SwipeToDeleteCallback(mAdapter));
+//        itemTouchHelper.attachToRecyclerView(recyclerView);
+//        recyclerView.setAdapter((RecyclerView.Adapter) items);
+////        recyclerView.setAdapter(new ItemAdapter(items));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+
+        items.add(new Item(101, "Coke", "Coke", 49.99, 40));
+        items.add(new Item(102, "Cheese", "Coke", 67.23, 25));
+        items.add(new Item(103, "Bread", "Coke", 12.59, 65));
+        items.add(new Item(104, "Egg", "Coke", 19.99, 79));
+        items.add(new Item(105, "Ham", "Coke", 45.65, 48));
+        items.add(new Item(106, "Spinach", "Coke", 48.65, 70));
+        items.add(new Item(107, "Garlic", "Coke", 78.99, 56));
+        items.add(new Item(108, "Weed", "Coke", 1.99, 555));
+        items.add(new Item(109, "Raspberry", "Coke", 98.49, 5));
+        items.add(new Item(110, "Apple", "Coke", 150.46, 1));
+
+        animateFab();
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("TAG", "onActivityResult");
+        if (resultCode == RESULT_OK && data.getParcelableExtra("item") != null) {
+            Log.d("TAG", "onActivityResult: OK");
+            Item item = data.getParcelableExtra("item");
+            items.add(item);
+            mAdapter.notifyDataSetChanged();
+            displayToast("Item added!");
+        } else {
+            Log.d("TAG", "onActivityResult: ERROR");
+        }
+    }
+
 
     /**
      * Close the main FAB menu
@@ -102,12 +136,11 @@ public class OrderList extends AppCompatActivity {
         } */
     }
 
-    /* public void fab2_addProduct_onClick(View view) {
+    public void fab2_addProduct_onClick(View view) {
         closeFabMenu();             // close the FAB menu before going to the next activity
-        Intent intentOrderItem = new Intent(this, Product.class);
+        Intent intentOrderItem = new Intent(this, CreateItem.class);
         startActivity(intentOrderItem);
     }
-    */
 
 
     /**
@@ -118,24 +151,6 @@ public class OrderList extends AppCompatActivity {
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Log.d("TAG", "onActivityResult");
-        if (resultCode == RESULT_OK) {
-//            if (data.getParcelableExtra("item") != null){
-            Log.d("TAG", "onActivityResult: OK");
-            Item item = data.getParcelableExtra("item");
-            items.add(item);
-            mAdapter.notifyDataSetChanged();
-            displayToast("Item added!");
-//            }
-        } else {
-            Log.d("TAG", "onActivityResult: ERROR");
-        }
     }
 
 }
@@ -150,6 +165,9 @@ public class OrderList extends AppCompatActivity {
                                     OR
                   https://github.com/nambicompany/expandable-fab
 
+
+    RecyclerView Designs:
+        https://github.com/jiang111/Awesome-RecyclerView-LayoutManager
  */
 
 

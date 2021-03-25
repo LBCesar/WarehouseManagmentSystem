@@ -13,15 +13,13 @@ import com.example.warehousemanagmentsystem491b.R;
 
 public class CreateItem extends AppCompatActivity {
 
-    // Member variable for holding the quantity
-    private int quantity;
-
-    // Member variables for creating new item
+    // Member variables for creating a new item
     private EditText editProductName;
     private EditText editProductID;
     private EditText editProductPrice;
     private EditText editProductDescription;
     private EditText editProductQuantity;
+    private int quantity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +47,7 @@ public class CreateItem extends AppCompatActivity {
                 String descr = editProductDescription.getText().toString();
                 double price = Double.parseDouble(editProductPrice.getText().toString());
                 int quantity = Integer.parseInt(editProductQuantity.getText().toString());
+
                 Item item = new Item(id, name, descr, price, quantity);
 
                 Intent intent = new Intent();
@@ -57,6 +56,7 @@ public class CreateItem extends AppCompatActivity {
                 finish();       // finishing activity
             }
         });
+
     }
 
 
@@ -64,11 +64,10 @@ public class CreateItem extends AppCompatActivity {
         editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
-                if (hasFocus) {
+                if (hasFocus)
                     editText.setHint(text);
-                } else {
+                else
                     editText.setHint("");
-                }
             }
         });
     }
@@ -79,12 +78,10 @@ public class CreateItem extends AppCompatActivity {
      */
     public void decreaseQuantity(View view) {
         quantity = Integer.parseInt(editProductQuantity.getText().toString());
-
         if (quantity < 0)
             quantity = 0;
         else
             quantity--;
-
         editProductQuantity.setText(String.valueOf(quantity));
     }
 
@@ -96,7 +93,6 @@ public class CreateItem extends AppCompatActivity {
         quantity++;
         editProductQuantity.setText(String.valueOf(quantity));
     }
-
 
 }
 
