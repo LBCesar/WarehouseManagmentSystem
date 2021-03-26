@@ -17,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.warehousemanagmentsystem491b.Orderlist.OrderList;
 import com.example.warehousemanagmentsystem491b.Profile.Profile;
 import com.example.warehousemanagmentsystem491b.R;
+import com.example.warehousemanagmentsystem491b.Supplier.add_supplier;
 
 public class EmployeeMenu extends AppCompatActivity {
 

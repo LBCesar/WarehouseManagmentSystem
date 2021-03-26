@@ -1,227 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:baselineAligned="true"
-    android:orientation="vertical"
-    tools:context=".Employee.add_supplier">
+    tools:context=".Supplier.add_supplier">
 
-    <TextView
-        android:id="@+id/supplier_infotext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="40dp"
-        android:text="Supplier Details"
-        android:textColor="#303F9F"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="12dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:theme="@style/ThemeOverlay.AppCompat">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supplier_name"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/supplier_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:singleLine="true" />
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            app:title="Supplier Menu" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/supplier_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
+            <!--            <com.google.android.material.tabs.TabItem-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:icon="@drawable/login_image"-->
+            <!--                android:text="Register" />-->
+            <!--            <com.google.android.material.tabs.TabItem-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:icon="@drawable/background"-->
+            <!--                android:text="Display" />-->
+
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/supplier_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="12dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supplier_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Shipping Address"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="12dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supplier_shipping_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPostalAddress"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="12dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supplier_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/supplier_confirm_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm Details"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/bottom_bg"
-        android:textColor="@color/colorWhite" />
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-    <!--Initial Supplier Activity -->
-
-    <!--<TextView-->
-    <!--android:id="@+id/supplier_infotext"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:layout_marginTop="30dp"-->
-    <!--android:layout_marginBottom="15dp"-->
-    <!--android:text="Supplier Info"-->
-    <!--android:textColor="#303F9F"-->
-    <!--android:textSize="25sp"-->
-    <!--android:textStyle="bold" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginTop="20dp"-->
-    <!--android:layout_marginBottom="5dp"-->
-    <!--android:text="Company Name" />-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/supplier_name"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:ems="10"-->
-    <!--android:hint="@string/supplier_name"-->
-    <!--android:inputType="text"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginRight="50dp"-->
-    <!--android:layout_marginBottom="5dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginTop="20dp"-->
-    <!--android:layout_marginBottom="5dp"-->
-    <!--android:text="Email" />-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/supplier_email"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:ems="10"-->
-    <!--android:hint="@string/supplier_email"-->
-    <!--android:inputType="textEmailAddress"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginRight="50dp"-->
-    <!--android:layout_marginBottom="5dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginTop="20dp"-->
-    <!--android:layout_marginBottom="5dp"-->
-    <!--android:text="Shipping Address" />-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/supplier_shipping_address"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:ems="10"-->
-    <!--android:hint="@string/supplier__shipping_address"-->
-    <!--android:inputType="textPostalAddress"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginRight="50dp"-->
-    <!--android:layout_marginBottom="5dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginTop="20dp"-->
-    <!--android:layout_marginBottom="5dp"-->
-    <!--android:text="Phone" />-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/supplier_phone"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="25dp"-->
-    <!--android:layout_marginRight="50dp"-->
-    <!--android:layout_marginBottom="5dp"-->
-    <!--android:ems="10"-->
-    <!--android:hint="@string/supplier_phone"-->
-    <!--android:inputType="phone" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/supplier_confirm_button"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Confirm Details"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:layout_marginTop="30dp"-->
-    <!--android:background="@drawable/bottom_bg"-->
-    <!--android:textColor="@color/colorWhite" />-->

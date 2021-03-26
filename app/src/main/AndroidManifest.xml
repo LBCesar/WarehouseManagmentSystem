@@ -22,7 +22,7 @@
             android:name=".Orderlist.CreateItem"
             android:noHistory="true" />
         <activity android:name=".Orderlist.OrderList" />
-        <activity android:name=".Employee.add_supplier" />
+        <activity android:name=".Supplier.add_supplier" />
         <activity android:name=".Employee.EmployeeMenu" />
         <activity android:name=".Login.Register" />
         <activity android:name=".Login.Login">

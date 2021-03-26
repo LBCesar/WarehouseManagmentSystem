@@ -38,6 +38,7 @@ public class CreateItem extends AppCompatActivity {
         initialValueTextField(editProductPrice, "Ex: 29.99");
         initialValueTextField(editProductDescription, "Ex: Item Description");
 
+        // catch error
         Button button = findViewById(R.id.orderlist_addProductButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
