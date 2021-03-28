@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.warehousemanagmentsystem491b.Inventory.ManageInventory;
 import com.example.warehousemanagmentsystem491b.Orderlist.OrderList;
 import com.example.warehousemanagmentsystem491b.Profile.Profile;
 import com.example.warehousemanagmentsystem491b.R;
@@ -32,7 +33,7 @@ public class EmployeeMenu extends AppCompatActivity {
             "Customers"
     };
 
-    private int[] employeeMenuImage = {
+    private final int[] employeeMenuImage = {
             R.drawable.employee_mainmenu_manage_inventory,
             R.drawable.employee_mainmenu_orderlist,
             R.drawable.employee_mainmenu_shift_management,
@@ -58,17 +59,24 @@ public class EmployeeMenu extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 if (i == 0) {           // Manage Inventory
-                    displayToast("Manage Inventory Clicked!");
+                    Intent startManageInventory = new Intent(EmployeeMenu.this, ManageInventory.class);
+                    startActivity(startManageInventory);
+
                 } else if (i == 1) {   // Order List
                     Intent startOrderList = new Intent(EmployeeMenu.this, OrderList.class);
                     startActivity(startOrderList);
+
                 } else if (i == 2) {   // Shift Management
                     displayToast("Shift Management Clicked! ");
+
                 } else if (i == 3) {   // Suppliers
                     Intent startAddSupplier = new Intent(EmployeeMenu.this, add_supplier.class);
                     startActivity(startAddSupplier);
+
                 } else if (i == 4) {   // Customers
-                    displayToast("Customers Clicked! ");
+                    Intent startCustomer = new Intent(EmployeeMenu.this, DisplayCustomer.class);
+                    startActivity(startCustomer);
+
                 }
             }
         });

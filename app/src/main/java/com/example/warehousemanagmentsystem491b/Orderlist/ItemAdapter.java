@@ -33,10 +33,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
-    // To delete item this is what to update :p
-    // http://www.techsolpoint.com/how-to-add-remove-and-update-items-in-android-recyclerview-android-studio.html
-    //
-    // Populating data into the item through holder
+
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
         Item item = items.get(position);
@@ -55,8 +52,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
 
     public void deleteItem(int position) {
-        Item mRecentlyDeletedItem = items.get(position);
-        int mRecentlyDeletedItemPosition = position;
         items.remove(position);
         notifyItemRemoved(position);
     }

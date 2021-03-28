@@ -56,17 +56,6 @@ public class OrderList extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
 
-//        recyclerView.setAdapter(mAdapter);
-//        recyclerView.setLayoutManager(new VegaLayoutManager());
-////        mAdapter = new ItemAdapter(items);
-//        ItemTouchHelper itemTouchHelper = new
-//                ItemTouchHelper(new SwipeToDeleteCallback(mAdapter));
-//        itemTouchHelper.attachToRecyclerView(recyclerView);
-//        recyclerView.setAdapter((RecyclerView.Adapter) items);
-////        recyclerView.setAdapter(new ItemAdapter(items));
-//        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
-
         items.add(new Item(101, "Coke", "Coke", 49.99, 40));
         items.add(new Item(102, "Cheese", "Coke", 67.23, 25));
         items.add(new Item(103, "Bread", "Coke", 12.59, 65));
